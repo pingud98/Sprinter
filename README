@@ -1,3 +1,5 @@
+//this file is for the CERN Robotics club reprap. All the custom settings for our build are in config.h. Please download and flash this file. 
+
 The leading developers of Sprinter are currently Kliment, caru and midopple, though many others contribute with their patches.
 
 This is a firmware for RAMPS and other reprap single-processor electronics setups. It supports printing from SD card, active heatbed control, and ATmega internal pullups.
@@ -44,16 +46,8 @@ Software installation
 Arduino software v1 has not been tested much, but is known to work with some boards.
    http://www.arduino.cc/en/Main/Software
 
-3. Get the sanguino software, version 0023
-   http://sanguino.cc/softwareforlinux
-
-follow the sanguino's readme so that your arduino hardware folder looks like 
-  arduino-0023/hardware/arduino
-  arduino-0023/hardware/sanguino
-  arduino-0023/hardware/tools
-
 4. Clone the Sprinter git repository. 
-   git clone https://github.com/kliment/Sprinter.git
+   git clone https://github.com/pingud98/Sprinter.git
 Optionally, switch to the desired branch
   git branch -a
   git checkout THE_BRANCH_YOU_WANT
@@ -66,14 +60,11 @@ Firmware compilation and upload
 6. Run make. If everything goes well Sprinter/applet/Sprinter.cpp should have been created.
 You can safely ignore the error message mentioning arduino-0023/hardware/arduino/cores/arduino/WString.o
 
-7. Connect your Sanguinololu to your computer
-   http://reprap.org/wiki/Sanguinololu
-
 8. Launch arduino-0023/arduino, open Sprinter/Sprinter.pde
 
 9. Go to Tools -> Serial Port, and select the relevant option
 
-10. Go to Tools -> Board, select Sanguino
+10. Go to Tools -> Board, select Arduino Mega 2560
 
 11. Go to the Configuration.h file and edit the following lines:
    #define MOTHERBOARD 62
